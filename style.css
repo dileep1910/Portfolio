@@ -429,3 +429,17 @@ section {
         margin-left: 1rem;
     }
 }
+
+
+.resume-btn {
+    background-color: hsl(220, 90%, 56%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.resume-btn:hover {
+    background-color: hsl(220, 90%, 46%);
+}
