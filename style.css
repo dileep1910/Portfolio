@@ -1,0 +1,431 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: hsl(220, 26%, 14%);
+    color: hsl(0, 0%, 98%);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: hsla(220, 26%, 14%, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid hsl(220, 26%, 20%);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, hsl(271, 81%, 56%), hsl(330, 81%, 60%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    color: hsl(215, 20.2%, 65.1%);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: hsl(271, 81%, 56%);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(271, 81%, 56%), hsl(330, 81%, 60%));
+    opacity: 0.1;
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, hsl(271, 81%, 56%), hsl(330, 81%, 60%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    margin-bottom: 2rem;
+    color: hsl(215, 20.2%, 65.1%);
+}
+
+.hero-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, hsl(271, 81%, 56%), hsl(330, 81%, 60%));
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px hsl(271, 81%, 56%, 0.6);
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 0;
+}
+
+.page-section {
+    min-height: 100vh;
+    padding-top: 8rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.gradient-text-primary {
+    background: linear-gradient(135deg, hsl(271, 81%, 56%), hsl(330, 81%, 60%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-secondary {
+    background: linear-gradient(135deg, hsl(180, 80%, 50%), hsl(271, 81%, 56%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* About Section */
+.about {
+    background-color: hsl(220, 26%, 16%);
+}
+
+.about-text {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: hsl(215, 20.2%, 65.1%);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    padding: 2rem;
+    background: linear-gradient(135deg, hsla(220, 26%, 16%, 0.8), hsla(220, 26%, 18%, 0.8));
+    border-radius: 0.75rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px -10px hsla(220, 26%, 10%, 0.5);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    font-weight: 600;
+}
+
+/* Education Section */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, hsl(271, 81%, 56%), hsl(330, 81%, 60%));
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.timeline-marker {
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(135deg, hsl(271, 81%, 56%), hsl(330, 81%, 60%));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.timeline-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    background: white;
+    border-radius: 50%;
+}
+
+.timeline-content {
+    margin-left: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, hsla(220, 26%, 16%, 0.8), hsla(220, 26%, 18%, 0.8));
+    border-radius: 0.75rem;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    box-shadow: 0 10px 30px -10px hsla(220, 26%, 10%, 0.5);
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-institution {
+    color: hsl(215, 20.2%, 65.1%);
+    margin-bottom: 0.25rem;
+}
+
+.timeline-years {
+    font-size: 0.875rem;
+    color: hsl(330, 81%, 60%);
+}
+
+/* Projects Section */
+.projects {
+    background-color: hsl(220, 26%, 16%);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 2rem;
+    background: linear-gradient(135deg, hsla(220, 26%, 16%, 0.8), hsla(220, 26%, 18%, 0.8));
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px -10px hsla(220, 26%, 10%, 0.5);
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: hsl(215, 20.2%, 65.1%);
+    margin-bottom: 1rem;
+}
+
+.project-tech {
+    font-size: 0.875rem;
+    color: hsl(330, 81%, 60%) !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    color: hsl(271, 81%, 56%);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: hsl(180, 80%, 50%);
+}
+
+.project-link span {
+    margin-right: 0.5rem;
+}
+
+/* Contact Section */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    padding: 2rem;
+    background: linear-gradient(135deg, hsla(220, 26%, 16%, 0.8), hsla(220, 26%, 18%, 0.8));
+    border-radius: 0.75rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px -10px hsla(220, 26%, 10%, 0.5);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .timeline-content {
+        margin-left: 1rem;
+    }
+}
